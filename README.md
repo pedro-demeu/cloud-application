@@ -29,8 +29,7 @@ docker run -it -p 3000:80 aws-deploy-app
 
 ## Deploy na AWS
 
-Esta aplicação está pronta para deploy em:
-- AWS ECS
-- AWS App Runner  
-- AWS Elastic Beanstalk
-- AWS EC2 com Docker
+Serviços utilizados:
+- AWS EKS
+- AWS EC2
+- AWS IAM           
