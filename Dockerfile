@@ -1,16 +1,19 @@
-FROM node:20-alpine
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Copia os manifests do Yarn
 COPY app/package.json app/yarn.lock ./
 
-# Instala dependências
 RUN yarn install
 
-# Copia o restante do código
 COPY app/ ./
 
-EXPOSE 3000
+RUN yarn build
 
-CMD ["yarn", "start"]
+FROM nginx:alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
