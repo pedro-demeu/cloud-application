@@ -22,7 +22,7 @@ npm start
 
 ```bash
 docker build -t aws-deploy-app .
-docker run -p 3000:80 aws-deploy-app
+docker run -it -p 3000:80 aws-deploy-app
 ```
 
 ## Deploy na AWS
