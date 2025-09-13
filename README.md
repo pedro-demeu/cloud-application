@@ -30,6 +30,6 @@ docker run -it -p 3000:80 aws-deploy-app
 ## Deploy na AWS
 
 Serviços utilizados:
-- AWS EKS
+- AWS ECR
 - AWS EC2
 - AWS IAM           
