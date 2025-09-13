@@ -2,6 +2,8 @@
 
 Aplicação React simples para aprender deploy na AWS.
 
+![Aplicação rodando](./image.png)
+
 ## Estrutura
 
 ```
